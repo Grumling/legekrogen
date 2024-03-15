@@ -1,26 +1,66 @@
 :root {
-
   /* Global Variables */
-  --main-color: lightblue;
+  --background-white: #ffffff;
+  --background-lightPurple: #c1adce;
+  --background-notice: #d7e6ec;
 
-  /* Component Specific Variables */
-  --box-color: #fff;
+  /* font */
+  --font-color-white: #ffffff;
+  --font-color-blue: #355674;
+  --font-color-purple: #9478a7;
+  --font-size-medium: 1.125rem; /* 18 px */
+  --font-size-hero: 4.063rem; /* 65 px */
+  --font-size-NavTop: 0.625rem; /* 10 px */
+  --font-size-SectionTitle: 2.5rem; /* 40 px */
+  --font-size-SectionSub: 2.813rem; /* 45 px */
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  /* ------------------------------------------- */
+  /**  Component Specific Variables
+  /* ------------------------------------------- */
+
+  /* NavBar */
+  --background-color-blue: #355674;
+  --burger-menu-size: 1.375rem; /* 22 px */
+
+  /* Hero */
+  --overlay-color-lightPurple: rgba(193, 173, 206, 0.5);
+
+  /* Cart */
+  --background-cart-grey: #00000080;
+  --background-cart-white: #ffffff;
+  --font-cart-blue: #355674;
+  --border-cart-grey: #707070;
+  --line-cart-purple: #c1adce;
+
+  /* Products */
+  --background-products-white: #ffffff;
+  --font-products-white: #ffffff;
+  --border-products-grey: #707070;
+  --line-products-purple: #c1adce;
+  --product-card-background-darkPurple: #9478a7;
+
+  /* Faq */
+  --arrow-color-darkPurple: #9478a7;
+
+  /*! LAV RESTEN SOM DU LAVER COMPONENTERNE */
+
+  /* ------------------------------------------- */
+  /* Layout Spacings */
+  /* ------------------------------------------- */
+
+  --site-gutters: 1.563rem; /* margin left and right for all pages */
+  --mobile-page-width: 0.625rem; /* width of the page */
+  --tablet-page-width: 48rem; /* width of the page */
+  --notice-height: 1.75rem; /* height of the notice bar */
 }
 
-@media (prefers-color-scheme: dark) {
-
-  :root {
-    
-    /* Global Variables */
-    --main-color: #333;
-
-
-    /* Component Specific Variables */
-    --box-color: rgb(235, 235, 160);
-
-  }
-
-}
+/* ------------------------------------------- */
+/** CCS Reset's */
+/* ------------------------------------------- */
 
 * {
   box-sizing: border-box;
@@ -28,25 +68,47 @@
   margin: 0;
 }
 
-html,
-body {
-  background-color: var(--main-color);
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px; /* 1rem = 16px */
 }
 
 body {
-  background-color: var(--main-color);
-  ;
+  background: var(--background-color-white);
+  color: var(--font-color-blue);
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ol,
+  ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 a {
   color: inherit;
-  text-decoration: underline;
-}
-
-
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  text-decoration: none;
 }

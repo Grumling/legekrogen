@@ -1,5 +1,5 @@
 import './globals.css'
-import { oswaldFont } from '@/utils/fonts';
+import { QuicksandFont, SquarePegFont } from '@/utils/fonts'
 
 export const metadata = {
   title: 'MediaCollege Denmark',
@@ -8,9 +8,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={oswaldFont.className}>
-        <span>[root layout]</span>
+    <html lang='en'>
+      <body className={`${QuicksandFont.className} ${SquarePegFont.variable}`}>
         {children}
       </body>
     </html>

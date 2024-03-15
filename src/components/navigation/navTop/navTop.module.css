@@ -1,0 +1,22 @@
+.navTopwrapper {
+  width: 100%;
+  height: var(--notice-height);
+  background: var(--background-notice);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.625rem;
+  color: var(--font-color-blue);
+  z-index: 100;
+  position: relative;
+}
+
+.navTopwrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navTopwrapper svg {
+  margin-right: var(--font-size-NavTop);
+}

@@ -1,7 +1,12 @@
+import NavBar from '@/components/navigation/navBar/navBar'
+import NavTop from '@/components/navigation/navTop/navTop'
 
 export default function siteLayout({ children }) {
-    return <div>
-        <span>[site layout]</span>
-        {children}
+  return (
+    <div>
+      <NavTop />
+      <NavBar />
+      {children}
     </div>
+  )
 }
