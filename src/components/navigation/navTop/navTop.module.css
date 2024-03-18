@@ -8,7 +8,8 @@
   font-size: 0.625rem;
   color: var(--font-color-blue);
   z-index: 100;
-  position: relative;
+  position: fixed;
+  top: 0;
 }
 
 .navTopwrapper div {

@@ -2,9 +2,10 @@
   background: var(--background-color-blue);
   width: 100%;
   color: var(--font-color-white);
-  position: relative;
+  position: fixed;
   height: 3.75rem;
   z-index: 100;
+  top: 28px;
 }
 
 .navItemsAlignment {

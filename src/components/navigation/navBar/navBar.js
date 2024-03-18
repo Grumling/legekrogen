@@ -24,15 +24,17 @@ const NavBar = () => {
     <div className={styles.navBarwrapper}>
       <nav>
         <div className={styles.navItemsAlignment}>
-          <figure>
-            <Image
-              className={styles.logo}
-              src='/logo/legekrogen_logo.png'
-              alt='logo'
-              width={100}
-              height={100}
-            />
-          </figure>
+          <Link href='/'>
+            <figure>
+              <Image
+                className={styles.logo}
+                src='/logo/legekrogen_logo.png'
+                alt='logo'
+                width={100}
+                height={100}
+              />
+            </figure>
+          </Link>
           {/* Burger menu icons */}
           <div className={styles.burgerMenu} onClick={handleToggle}>
             {isToggled ? <FaCircleXmark /> : <FaBars />}
@@ -44,9 +46,10 @@ const NavBar = () => {
           className={`${styles.dropdown} ${isOpen ? styles.dropdownOpen : ''}`}
           onClick={toggleDropdown}
         >
+          <Link href='/'>Forside</Link>
           <Link href='/products'>Produkter</Link>
           <Link href='/faq'>FAQ</Link>
-          <Link href='/membership'>Kundeklubben</Link>
+          <Link href='/CustomerClub'>Kundeklubben</Link>
         </div>
       </nav>
     </div>

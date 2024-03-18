@@ -1,7 +1,7 @@
 import styles from './navTop.module.css'
 import { FaTruck } from 'react-icons/fa'
 
-const NavTop = async () => {
+const NavTop = () => {
   return (
     <div className={styles.navTopwrapper}>
       <div>

@@ -1,13 +1,10 @@
 .sectionTitlewrapper {
   width: 100%;
-  padding-left: var(--site-gutters);
-  padding-right: var(--site-gutters);
   color: var(--font-color-white);
-  width: 100%;
 }
 
 .sectionPlacer {
-  padding: 50px 0 62px 0;
+  padding: 3.125rem 0 3.875rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;

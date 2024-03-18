@@ -1,0 +1,18 @@
+.customerReviewsWrapper {
+  padding-left: var(--site-gutters);
+  padding-right: var(--site-gutters);
+  color: var(--font-color-blue);
+}
+
+.customerReviewReviewer {
+  padding-bottom: 60px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.customerReviewReviewerName {
+  padding-top: 13px;
+  font-size: 24px;
+  font-family: var(--font-square-peg);
+  color: var(--font-color-purple);
+}
