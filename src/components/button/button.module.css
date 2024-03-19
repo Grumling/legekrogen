@@ -1,0 +1,26 @@
+.buttonWrapper {
+  border-radius: 1.4375rem;
+  background: var(--background-color-blue);
+  color: var(--font-color-white);
+  font-family: 'Quicksand', sans-serif;
+  padding: 14px 23px;
+  margin: 0 1.5625rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  user-select: none;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  border: none;
+}
+
+.buttonWrapper:hover {
+  transition: 0.2s ease-in-out;
+  background: #3f6385;
+}
+
+.buttonWrapper:active {
+  transform: scale(0.95);
+  transition: 0.1s;
+}

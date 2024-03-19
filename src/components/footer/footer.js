@@ -1,18 +1,12 @@
 'use client'
+import Button from '../button/button'
 import styles from './footer.module.css'
 import { FaPhone, FaEnvelope, FaFacebook, FaInstagram } from 'react-icons/fa6'
 
 const Footer = () => {
   return (
     <div className={styles.footerwrapper}>
-      <div className={styles.footerTop}>
-        <p>Kunne du også tænke dig at blive medlem af vores</p>
-        <h2>Kundeklub?</h2>
-        <div className={styles.footerButton} type='submit'>
-          Bliv medlem nu!
-        </div>
-      </div>
-      <div className={styles.footerBottom}>
+      <div className={styles.footer}>
         <h3>Kundeservice</h3>
         {/* Mail Info */}
         <div className={styles.footerEmail}>
@@ -26,7 +20,7 @@ const Footer = () => {
         </div>
         {/* SoMe Info */}
         <p className={styles.footerSoMeText}>Følg os</p>
-        <div className={styles.footerBottomSoMeIcons}>
+        <div className={styles.footerSoMeIcons}>
           <FaFacebook />
           <FaInstagram />
         </div>

@@ -1,3 +1,4 @@
+import { BasketContextProvider } from '@/context/basket'
 import './globals.css'
 import { QuicksandFont, SquarePegFont } from '@/utils/fonts'
 
@@ -10,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={`${QuicksandFont.className} ${SquarePegFont.variable}`}>
-        {children}
+        <BasketContextProvider>{children}</BasketContextProvider>
       </body>
     </html>
   )

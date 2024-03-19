@@ -1,24 +1,36 @@
 'use client'
 import Image from 'next/image'
 import styles from './navBar.module.css'
-import { FaBars, FaCircleXmark } from 'react-icons/fa6'
-import { useState } from 'react'
+import { FaBars, FaCircleXmark, FaCartShopping } from 'react-icons/fa6'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Basket from '@/components/basket/basket'
 
 const NavBar = () => {
+  const [isOpenCart, setIsOpenCart] = useState(false)
   const [isToggled, setIsToggled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
 
-  // Function to handle the toggling of the burger menu
   const handleToggle = () => {
     setIsToggled(!isToggled)
     setIsOpen(!isOpen)
+    if (isOpenCart) {
+      setIsOpenCart(false)
+    }
   }
 
-  // Function to handle the toggling of the dropdown menu
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen)
+  const handleCartToggle = () => {
+    setIsOpenCart(!isOpenCart)
+    if (isOpen) {
+      setIsOpen(false)
+    }
   }
+
+  useEffect(() => {
+    setIsOpen(false)
+    setIsOpenCart(false)
+    setIsToggled(false)
+  }, [])
 
   return (
     <div className={styles.navBarwrapper}>
@@ -35,21 +47,31 @@ const NavBar = () => {
               />
             </figure>
           </Link>
-          {/* Burger menu icons */}
-          <div className={styles.burgerMenu} onClick={handleToggle}>
-            {isToggled ? <FaCircleXmark /> : <FaBars />}
+          <div className={styles.NavIcons}>
+            <FaCartShopping onClick={handleCartToggle} />
+            <div className={styles.burgerMenu} onClick={handleToggle}>
+              {isToggled ? <FaCircleXmark /> : <FaBars />}
+            </div>
           </div>
         </div>
 
-        {/* MENU */}
         <div
           className={`${styles.dropdown} ${isOpen ? styles.dropdownOpen : ''}`}
-          onClick={toggleDropdown}
+          onClick={handleToggle}
         >
           <Link href='/'>Forside</Link>
           <Link href='/products'>Produkter</Link>
           <Link href='/faq'>FAQ</Link>
           <Link href='/CustomerClub'>Kundeklubben</Link>
+        </div>
+
+        <div
+          className={`${styles.dropdownCart} ${
+            isOpenCart ? styles.dropdownCartOpen : ''
+          }`}
+          onClick={handleCartToggle}
+        >
+          <Basket />
         </div>
       </nav>
     </div>

@@ -3,6 +3,7 @@ import Hero from '@/components/heroe/hero'
 import styles from './page.module.css'
 import Product from '@/components/products/product/product'
 import SectionTitle from '@/components/sectionTitle/sectionTitle'
+import CtaMembership from '@/components/ctaMembership/ctaMembership'
 
 export default function Products() {
   return (
@@ -21,6 +22,7 @@ export default function Products() {
       />
 
       <Product />
+      <CtaMembership />
     </main>
   )
 }

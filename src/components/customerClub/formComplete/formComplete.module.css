@@ -1,0 +1,39 @@
+.formCompleteWrapper {
+  padding: 0 var(--site-gutters);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--font-color-white);
+  background-image: url(../../../../public/heros/medlem.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color-lightPurple);
+  z-index: 9;
+}
+
+.formCompleteWrapper h1 {
+  font-family: var(--font-square-peg);
+  font-size: 65px;
+  padding-bottom: 25px;
+  z-index: 10;
+}
+
+.formCompleteWrapper p {
+  font-size: 18px;
+  padding-bottom: 53px;
+  z-index: 10;
+}

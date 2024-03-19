@@ -16,10 +16,15 @@
   padding: 0.625rem 1.188rem;
 }
 
-.logo {
+.NavIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 5.625rem;
 }
 
-.burgerMenu svg {
+.NavIcons svg {
   font-size: var(--burger-menu-size);
 }
 
@@ -37,7 +42,21 @@
   transition: 0.25s ease-in-out;
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-medium);
-  padding-bottom: 90%;
+  padding-bottom: 30rem;
+}
+
+.dropdownCart {
+  position: fixed;
+  top: 88px;
+  right: -100%; /* start from outside the viewport */
+  background: var(--background-Grey);
+  height: 100%; /* take up the full height */
+  width: 100%; /* take up the full width */
+  transition: 0.25s ease-in-out; /* animate the transition */
+}
+
+.dropdownCartOpen {
+  right: 0; /* move to inside the viewport */
 }
 
 .dropdown a {

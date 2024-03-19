@@ -4,56 +4,10 @@
 }
 
 /* ------------------------------------------- */
-/** FOOTER TOP */
+/** FOOTER */
 /* ------------------------------------------- */
 
-.footerTop {
-  text-align: center;
-  color: var(--font-color-blue);
-  background: var(--background-notice);
-}
-
-.footerTop p {
-  font-weight: var(--font-weight-regular);
-  font-size: 1.125rem;
-  padding: 4.125rem 1.5625rem 0 2.3125rem;
-}
-
-.footerTop h2 {
-  font-family: var(--font-square-peg);
-  font-weight: var(--font-weight-regular);
-  font-size: 4.0625rem;
-  padding: 0 2.8125rem 1.8125rem 2.8125rem;
-}
-
-.footerButton {
-  border-radius: 1.4375rem;
-  background: var(--background-color-blue);
-  color: var(--font-color-white);
-  padding: 14px 23px;
-  margin: 0 1.5625rem;
-  margin-bottom: 6.0625rem;
-  text-transform: capitalize;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-  user-select: none;
-}
-
-.footerButton:hover {
-  transition: 0.2s ease-in-out;
-  background: #3f6385;
-}
-
-.footerButton:active {
-  transform: scale(0.95);
-  transition: 0.1s;
-}
-
-/* ------------------------------------------- */
-/** FOOTER BOTTOM  */
-/* ------------------------------------------- */
-
-.footerBottom {
+.footer {
   background: var(--background-color-blue);
   color: var(--font-color-white);
   text-align: center;
@@ -61,7 +15,7 @@
   padding-bottom: 3.125rem;
 }
 
-.footerBottom h3 {
+.footer h3 {
   font-size: 2.5rem;
   font-family: var(--font-square-peg);
 }
@@ -100,7 +54,7 @@
   margin-bottom: 0.5625rem;
 }
 
-.footerBottomSoMeIcons svg {
+.footerSoMeIcons svg {
   width: 3.125rem;
   height: 3.125rem;
   display: inline-flex;

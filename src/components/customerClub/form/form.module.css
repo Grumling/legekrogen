@@ -1,42 +1,57 @@
-.formWrapper {
+.form {
+  padding: 0 30px;
+  padding-top: 80px;
+  padding-bottom: 100px;
   width: 100%;
-  padding-left: var(--site-gutters);
-  padding-right: var(--site-gutters);
-  margin-top: 80px;
-  margin-bottom: 100px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  gap: 27px;
+  align-items: center;
+  /*  background: darkcyan; */
 }
 
-.formWrapper input {
+.form input {
+  border-radius: 25px;
+  border: solid 1px var(--background-Grey);
+  padding: 8px 25px;
   width: 100%;
-  padding: 15px 25px;
-  border: 1px solid var(--font-color-blue);
-  border-radius: 28px;
+  margin-bottom: 27px;
+  color: var(--background-Grey);
   font-family: var(--font-square-peg);
   font-size: 22px;
-  color: var(--background-Grey);
+  font-weight: var(--font-weight-regular);
+}
+
+.form input:focus {
+  outline: solid 1px var(--font-color-purple);
+}
+
+.form textarea {
+  border-radius: 25px;
   border: solid 1px var(--background-Grey);
-}
-
-.formWrapper input:focus {
-  outline: solid 2px var(--background-lightPurple);
-}
-
-.formWrapper textarea {
+  padding: 8px 25px;
   width: 100%;
-  padding: 15px 25px;
-  border: 1px solid var(--font-color-blue);
-  border-radius: 28px;
+  height: 180px;
+  resize: none;
+  margin-bottom: 27px;
+  color: var(--background-Grey);
   font-family: var(--font-square-peg);
   font-size: 22px;
-  color: var(--background-Grey);
-  border: solid 1px var(--background-Grey);
+  font-weight: var(--font-weight-regular);
 }
 
-.formWrapper textarea:focus {
-  outline: solid 2px var(--background-lightPurple);
+.form textarea:focus {
+  outline: solid 1px var(--font-color-purple);
+}
+
+.ColorChange {
+  background: var(--background-DarkPurple);
+}
+
+.ColorChange:hover {
+  background: #a184b4;
+}
+
+.form input:focus,
+.form textarea:focus {
+  color: var(--font-color-blue);
 }

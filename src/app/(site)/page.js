@@ -4,6 +4,7 @@ import styles from './page.module.css'
 import Product from '@/components/products/product/product'
 import CustomerReviews from '@/components/frontpage/customerReviews/customerReviews'
 import SectionTitle from '@/components/sectionTitle/sectionTitle'
+import CtaMembership from '@/components/ctaMembership/ctaMembership'
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
 
       {/* Customer Reviews */}
       <CustomerReviews />
+      <CtaMembership />
     </main>
   )
 }

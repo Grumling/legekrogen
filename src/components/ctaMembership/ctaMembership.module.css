@@ -1,0 +1,25 @@
+.ctaMembershipWrapper {
+  text-align: center;
+  color: var(--font-color-blue);
+  background: var(--background-notice);
+}
+
+.ctaMembershipWrapper p {
+  font-weight: var(--font-weight-regular);
+  font-size: 1.125rem;
+  padding: 4.125rem 1.5625rem 0 2.3125rem;
+}
+
+.ctaMembershipWrapper h2 {
+  font-family: var(--font-square-peg);
+  font-weight: var(--font-weight-regular);
+  font-size: 4.0625rem;
+  padding: 0 2.8125rem 1.8125rem 2.8125rem;
+}
+
+.buttonPlacement {
+  padding-bottom: 5.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

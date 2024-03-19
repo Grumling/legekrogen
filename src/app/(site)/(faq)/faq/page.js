@@ -1,6 +1,7 @@
 import Hero from '@/components/heroe/hero'
 import styles from './page.module.css'
 import Accordion from '@/components/faq/accordion/accordion'
+import CtaMembership from '@/components/ctaMembership/ctaMembership'
 
 export default function Faq() {
   return (
@@ -17,6 +18,7 @@ export default function Faq() {
       />
       {/* Accordion */}
       <Accordion />
+      <CtaMembership />
     </main>
   )
 }
