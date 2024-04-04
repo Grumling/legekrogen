@@ -3,9 +3,19 @@ import styles from './product.module.css'
 import { useEffect, useState } from 'react'
 import { useBasket } from '@/context/basket'
 
+const Discount = ({ discountInPercent, price }) => {
+  if (discountInPercent === 0) return null
+
+  return (
+    <div>
+      <div>Sparet: {(price * discountInPercent) / 100} Kr.</div>
+    </div>
+  )
+}
+
 const Product = ({ filterFunc = () => true }) => {
   const [products, setProducts] = useState([])
-  const { basket, setBasket } = useBasket() // Use basket from context
+  const { basket, setBasket, addToBasket } = useBasket() // Use basket from context
 
   useEffect(() => {
     const getProducts = async () => {
@@ -16,10 +26,6 @@ const Product = ({ filterFunc = () => true }) => {
 
     getProducts()
   }, [])
-
-  const addToBasket = (product) => {
-    setBasket((prevBasket) => [...prevBasket, product])
-  }
 
   return (
     <div className={styles.productwrapper}>
@@ -46,10 +52,41 @@ const Product = ({ filterFunc = () => true }) => {
               <div className={styles.cardInfo}>
                 {/* Card - title and Price */}
                 <div className={styles.cardTitle}>{product.title}</div>
-                <div className={styles.cardPrice}>{product.price} Kr.</div>
-                <button onClick={() => addToBasket(product)}>
-                  Add to basket
-                </button>
+                <div className={styles.cardPrice}>
+                  {product.discountInPercent > 0 ? (
+                    <>
+                      <span
+                        style={{
+                          textDecoration: 'line-through',
+                          color: 'rgba(0, 0, 0, 0.3)',
+                        }}
+                      >
+                        {product.price} Kr.
+                      </span>
+                      <span>
+                        {' '}
+                        {product.price -
+                          (product.price * product.discountInPercent) /
+                            100}{' '}
+                        Kr.
+                      </span>
+                    </>
+                  ) : (
+                    `${product.price} Kr.`
+                  )}
+                </div>
+                <Discount
+                  discountInPercent={product.discountInPercent}
+                  price={product.price}
+                />
+                <div className={styles.cardButton}>
+                  <button
+                    className={styles.cardButton}
+                    onClick={() => addToBasket(product._id)}
+                  >
+                    Køb
+                  </button>
+                </div>
               </div>
             </div>
           ))}

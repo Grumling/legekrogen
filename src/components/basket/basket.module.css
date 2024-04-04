@@ -2,12 +2,15 @@
   width: 100%;
   padding: 20px;
   display: flex;
+  background: white;
+  color: var(--font-color-blue);
   flex-direction: column;
 }
 
 .container img {
   border-radius: 5px;
   margin-bottom: 8px;
+  margin-right: 14px;
 }
 
 .container h2 {
@@ -29,13 +32,56 @@
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 2px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .basketItemWrapper {
+  position: relative;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: row-reverse;
-  border-bottom: solid 2px var(--main-pink-color);
-  margin-bottom: 16px;
+  border-bottom: solid 2px var(--background-lightPurple);
+  margin-bottom: 35px;
+}
+
+.productImage {
+  border: solid 1px var(--background-Grey);
+  padding: 5px;
+}
+
+.buttonRemoveAdd {
+  font-size: 12px;
+  padding: 15px 15px;
+  height: 15px;
+  width: 15px;
+  border-radius: 25px;
+  background: var(--background-DarkPurple);
+  color: var(--font-color-white);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basketButtonWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.productPrice {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  right: 25px;
+  bottom: 34px;
+  font-weight: var(--font-weight-bold);
+  font-size: 22px;
 }

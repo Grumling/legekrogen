@@ -53,12 +53,27 @@
 }
 
 .cardInfo {
+  position: relative;
   margin-bottom: 2.875rem;
   max-width: 18.75rem;
   padding: 0.8125rem 0.625rem 1.125rem 0.8125rem;
   background: var(--background-DarkPurple);
   border-bottom-left-radius: 0.9375rem;
   border-bottom-right-radius: 0.9375rem;
+}
+
+.cardButton button {
+  width: 50%;
+  padding: 5px 10px;
+  margin-top: 15px;
+  border-radius: 25px;
+  background: var(--background-color-blue);
+  color: var(--font-color-white);
+  font-family: 'Quicksand', sans-serif;
+  padding: 10px 15px;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: none;
 }
 
 .cardTitle {

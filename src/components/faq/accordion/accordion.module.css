@@ -32,3 +32,8 @@
   font-weight: var(--font-weight-regular);
   position: relative;
 }
+
+.AccordionccordionWrapper ol {
+  list-style-type: disc; /* or whatever style you want */
+  padding-left: 40px; /* adjust as needed */
+}

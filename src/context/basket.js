@@ -13,6 +13,7 @@ export const BasketContextProvider = ({ children }) => {
     }
   }, [])
 
+  // Add to basket
   const addToBasket = (id, amount = 1) => {
     let basket = localStorage.getItem('basket')
     if (basket) {
@@ -43,8 +44,48 @@ export const BasketContextProvider = ({ children }) => {
     setBasket(basket)
   }
 
+  // Remove from basket
+  const removeFromBasket = (id) => {
+    console.log(`Fjernede products ${id} fra basket`) // LOG!
+    let basket = JSON.parse(localStorage.getItem('basket')) || []
+
+    let itemInBasket = basket.find((item) => item.id === id)
+
+    if (itemInBasket) {
+      itemInBasket.amount -= 1
+
+      if (itemInBasket.amount <= 0) {
+        basket = basket.filter((item) => item.id !== id)
+      }
+    }
+
+    localStorage.setItem('basket', JSON.stringify(basket))
+    setBasket(basket)
+  }
+
+  const addMoreToBasket = (id) => {
+    let newBasket = basket.map((item) => {
+      if (item.id === id) {
+        return { ...item, amount: item.amount + 1 }
+      } else {
+        return item
+      }
+    })
+
+    localStorage.setItem('basket', JSON.stringify(newBasket))
+    setBasket(newBasket)
+  }
+
   return (
-    <BasketContext.Provider value={{ basket, addToBasket, setBasket }}>
+    <BasketContext.Provider
+      value={{
+        basket,
+        addToBasket,
+        setBasket,
+        removeFromBasket,
+        addMoreToBasket,
+      }}
+    >
       {children}
     </BasketContext.Provider>
   )

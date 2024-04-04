@@ -1,5 +1,4 @@
 'use client'
-import Button from '../button/button'
 import styles from './footer.module.css'
 import { FaPhone, FaEnvelope, FaFacebook, FaInstagram } from 'react-icons/fa6'
 

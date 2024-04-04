@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const Basket = () => {
-  const { basket, name } = useBasket()
+  const { basket, name, removeFromBasket, addMoreToBasket } = useBasket()
   const [basktItems, setBasketItems] = useState([])
 
   const totalPrice = basktItems.reduce((total, basketItem) => {
@@ -32,6 +32,8 @@ const Basket = () => {
         })
 
         setBasketItems(products)
+      } else {
+        setBasketItems([]) //DET HER FJERNEDE LAST DELETD BASKET ITEM?
       }
     }
 
@@ -40,23 +42,52 @@ const Basket = () => {
 
   return (
     <div className={styles.container}>
-      <h2>Din Kurv Er tom</h2>
+      {basket.length === 0 ? <h2>Der er ingen varer i kurven.</h2> : null}
       {basktItems.map((basketItem) => {
         return (
           <div className={styles.basketItemWrapper} key={basketItem._id}>
+            <div className={styles.productBasketInfo}>
+              {basketItem.title}
+              <br />
+              <div>Stk. [{basketItem.amount}]</div>
+              {''}{' '}
+              <div className={styles.basketButtonWrapper}>
+                <button
+                  className={styles.buttonRemoveAdd}
+                  onClick={(event) => {
+                    event.stopPropagation()
+                    removeFromBasket(basketItem._id)
+                  }}
+                >
+                  -
+                </button>
+                <button
+                  className={styles.buttonRemoveAdd}
+                  onClick={(event) => {
+                    event.stopPropagation()
+                    addMoreToBasket(basketItem._id)
+                  }}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+            <div className={styles.productPrice}>{basketItem.price} Kr.</div>
             <Image
+              className={styles.productImage}
               src={basketItem.image}
               alt={basketItem.title}
               width={80}
               height={70}
             />
-            <div className={styles.productBasketInfo}>
-              {basketItem.title} - {basketItem.amount * basketItem.price} Kr.
-            </div>
           </div>
         )
       })}
-      <div className={styles.totalPrice}>Total Price: {totalPrice}</div>
+      {totalPrice > 0 && (
+        <div className={styles.totalPrice}>
+          I alt <u>{totalPrice} Kr</u>
+        </div>
+      )}
     </div>
   )
 }

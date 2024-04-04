@@ -5,11 +5,14 @@ import { FaBars, FaCircleXmark, FaCartShopping } from 'react-icons/fa6'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Basket from '@/components/basket/basket'
+import { useBasket } from '@/context/basket'
 
 const NavBar = () => {
   const [isOpenCart, setIsOpenCart] = useState(false)
   const [isToggled, setIsToggled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+
+  const { basket } = useBasket()
 
   const handleToggle = () => {
     setIsToggled(!isToggled)
@@ -19,6 +22,7 @@ const NavBar = () => {
     }
   }
 
+  // Handle cart toggle
   const handleCartToggle = () => {
     setIsOpenCart(!isOpenCart)
     if (isOpen) {
@@ -26,6 +30,7 @@ const NavBar = () => {
     }
   }
 
+  // Close dropdowns on page load
   useEffect(() => {
     setIsOpen(false)
     setIsOpenCart(false)
@@ -49,6 +54,9 @@ const NavBar = () => {
           </Link>
           <div className={styles.NavIcons}>
             <FaCartShopping onClick={handleCartToggle} />
+            {basket.length > 0 && (
+              <span className={styles.cartItemCount}>{basket.length}</span>
+            )}
             <div className={styles.burgerMenu} onClick={handleToggle}>
               {isToggled ? <FaCircleXmark /> : <FaBars />}
             </div>

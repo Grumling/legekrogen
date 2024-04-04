@@ -16,7 +16,7 @@
   width: 100%;
   margin-bottom: 27px;
   color: var(--background-Grey);
-  font-family: var(--font-square-peg);
+  /* font-family: var(--font-square-peg); */
   font-size: 22px;
   font-weight: var(--font-weight-regular);
 }
@@ -34,7 +34,7 @@
   resize: none;
   margin-bottom: 27px;
   color: var(--background-Grey);
-  font-family: var(--font-square-peg);
+  /* font-family: var(--font-square-peg); */
   font-size: 22px;
   font-weight: var(--font-weight-regular);
 }

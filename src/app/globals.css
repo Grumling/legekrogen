@@ -19,6 +19,7 @@
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+  --font-weight-bold: 700;
 
   /* ------------------------------------------- */
   /**  Component Specific Variables
@@ -84,7 +85,7 @@ html {
 body {
   background: var(--background-color-white);
   color: var(--font-color-blue);
-  padding-top: 5.5rem; /* Pushes content away from under the nav */
+  /* padding-top: 5.5rem; */ /* Pushes content away from under the nav */
   body,
   h1,
   h2,

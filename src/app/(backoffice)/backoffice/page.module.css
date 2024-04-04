@@ -1,0 +1,57 @@
+.pageWrapper {
+  background: darkgray;
+  padding: 0 10px;
+  padding-bottom: 60px;
+}
+
+.pageWrapper table {
+  width: 100%;
+  table-layout: fixed;
+  /* border-collapse: collapse; */
+}
+
+.pageWrapper h2 {
+  padding: 20px;
+  text-align: center;
+  color: var(--font-color-white);
+  padding-top: 50px;
+}
+
+.pageWrapper th {
+  background-color: var(--background-lightPurple);
+  color: white;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageWrapper td {
+  padding: 10px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+.table {
+  background: var(--background-DarkPurple);
+  color: var(--font-color-white);
+}
+
+.name {
+  min-width: 200px;
+}
+
+.email {
+  min-width: 300px;
+}
+
+.message {
+  min-width: 800px;
+}
+
+.subscriber {
+}

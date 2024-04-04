@@ -1,0 +1,23 @@
+.navBarWrapper {
+  width: 100%;
+  background: var(--background-DarkPurple);
+  color: var(--font-color-white);
+  font-weight: var(--font-weight-bold);
+  font-size: 35px;
+  letter-spacing: 5px;
+  padding: 10px 20px;
+}
+
+.navBarWrapper a {
+  background: var(--background-lightPurple);
+  margin-right: 30px;
+  padding: 5px 10px;
+  font-size: 18px;
+  text-decoration: uppercase;
+  letter-spacing: 6px;
+  cursor: pointer;
+}
+
+.navBarWrapper a:hover {
+  background: #aa95b8;
+}
